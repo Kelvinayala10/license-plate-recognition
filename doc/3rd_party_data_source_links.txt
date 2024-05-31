@@ -1,0 +1,16 @@
+- OCR Racing Bib Number Recognition
+    >  https://www.kaggle.com/datasets/trainingdatapro/ocr-race-numbers/code
+- TextOCR
+    >  https://paperswithcode.com/dataset/textocr
+- UFPR - ALPR
+    >  https://paperswithcode.com/dataset/ufpr-alpr
+- SSIG-SegPlate
+    >  https://paperswithcode.com/dataset/ssig-segplate
+- RodoSol - ALPR
+    >  https://paperswithcode.com/dataset/rodosol-alpr
+- ChineseLP
+    >  https://paperswithcode.com/dataset/chineselp
+- License Plates - 1 209 438 OCR Plates
+    >  https://www.kaggle.com/datasets/trainingdatapro/license-plates-1-209-438-ocr-plates
+- Car License Plate Detection
+    >  https://www.kaggle.com/datasets/andrewmvd/car-plate-detection?resource=download
