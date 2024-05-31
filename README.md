@@ -6,7 +6,9 @@ This repository serves to discuss the challenges currently in open-source qualit
 
 This repository demonstrates how to leverage Roboflow in developing a license plate recognition system, specifically for license plates used in the United States, however through testing Roboflow’s various capabilities I believe it provides a solid platform to develop projects for various use cases in machine learning. 
 
-I am not sponsored by Roboflow nor did we communicate in any capacity. The rise of platforms tailored to reducing the intensive effort of collecting, labeling and validating datasets caught my attention after intensive efforts of building datasets to be used in machine learning applications for industry. Due to this, I wanted to educate myself in these tools further and document my journey while doing so in hopes that it will be of use to other engineers seeking to learn how to more efficiently develop datasets for their own journey in machine learning. 
+*Please note that I am not sponsored by Roboflow nor did we communicate in any capacity.*
+
+While developing machine learning applications for industry, the intensive effort of collecting, labeling and validating datasets became a great limiting factor in scaling a production-ready project. Thus, platforms tailored to reduce this caught my attention immediately. I wanted to educate myself in these tools further and document my journey while doing so in hopes that it will be of use to other engineers seeking to learn how to more efficiently develop datasets for their own journey in machine learning.
 
 
 # **Computer Vision Fundamentals**
@@ -21,7 +23,7 @@ Machines cannot process images with the same biological mechanisms that we do, a
 
 <!--- [2] --->
 
-Each pixel is represented by 1 of 2 values: 0 or 1 . This corresponds in turn to whether a given pixel is black or white. Although we can easily interpret the face without resorting to analyzing the pixel values, machine learning relies on this interpretation to be able to extract features and classify the data being inputted. This involves technologies such as neural networks, transformers and accelerators that I will not be going into detail in as this document is focused on the efficiencies brought by Roboflow but could be found here for more information.
+Each pixel is represented by 1 of 2 values: 0 or 1 . This corresponds in turn to whether a given pixel is black or white. Although we can easily interpret the face without resorting to analyzing the pixel values, machine learning relies on this interpretation to be able to extract features and classify the data being inputted. This involves technologies such as neural networks, transformers and accelerators that I will not be going into detail in as this document is focused on the efficiencies brought by Roboflow but could be found [here](https://deeprevision.github.io/posts/001-transformer/) for more information.
 
 Note that in real-world settings, images are not two dimensional and instead are composed of 3 layers of RGB values corresponding to the intensity of red, green or blue. This intensity is represented by an 8-bit integer value from 0 to 255 for each respective color. 
 
@@ -36,7 +38,7 @@ As shown below, even with just a 6 X 6 two-dimensional array many images could b
 
 <!--- [4] --->
 
-Let us take the previous color and now begin to add color to better illustrate what we are accustomed to now seeing on our phones. In this example, colors can still be presented with relatively few bits and thus any subsequent computations with standard practices on everyday computers are still possible. 
+Let us take the previous figure and now begin to add color to better illustrate what we are accustomed to now seeing on our phones. In this example, colors can still be presented with relatively few bits and thus any subsequent computations with standard practices on everyday computers are still possible. 
 
 <img src="doc/images/misc/cv_example_003.jpg" alt="cv_example_003.jpg">
 
@@ -62,7 +64,7 @@ Analysis of data in these large amounts at great speed used to require expensive
 
 In the same manner that images of cats could be represented by pixels and bits, so too could any other image. However, for images to be useful they must typically be taken in higher resolutions. This increase in data needed to produce the images coupled with the already difficult task of teaching a machine how to understand them as inputs leads to the need of machine learning through computer vision to develop any application. 
 
-For example, license plate recognition systems are necessary for security and compliance across roadways, hospitals, parking lots, government facilities and any other controlled security perimeter. For such a system to work properly, the license plate must be able to record across multiple light conditions, at varying speeds and be able to discern the target object versus other possible examples of noise that may be present in the environment. Otherwise, tollways would be unenforceable at scale, sensitive facilities such as hospitals and government offices would be unable to audit who has entered/exited a given space. Overall, this leads to a degradation in the possible avenues of security a group may possess. 
+For example, license plate recognition systems are necessary for security and compliance across roadways, hospitals, parking lots, government facilities and any other controlled security perimeter. For such a system to work properly, the license plate recognition system must be able to record across multiple light conditions, at varying speeds and be able to discern the target object versus other possible examples of noise that may be present in the environment. Otherwise, tollways would be unenforceable at scale, sensitive facilities such as hospitals and government offices would be unable to audit who has entered/exited a given space. Overall, this leads to a degradation in the possible avenues of security a group may possess. 
 
 The advent of effective technologies such as convolutional neural networks enhancing computer vision performance allows for these applications to function and continue to grow.
 
@@ -87,9 +89,9 @@ The advent of effective technologies such as convolutional neural networks enhan
 
 <!--- [9] --->
 
-Currently, there are not many options available to curate a dataset composed of license plates from the United States. The few resources that are found publicly, found [here](doc/3rd_party_data_source_links.txt), are not licensed for commercial applications and thus it becomes necessary to manually create new datasets for each prototype application. This blocks companies and teams from being able to develop new software and methodologies in applications such as license plate recognition as now countless man-hours must now be used to collect data in public domains. When this is completed, even if data is collected on public roads/spaces, companies would be wary of disclosing this action stemming from the emergence of possible avenues of litigation from increased data privacy protection llaws such as the [GDPR](https://gdpr-info.eu) and [CCPA](https://oag.ca.gov/privacy/ccpa). 
+Currently, there are not many options available to curate a dataset composed of license plates from the United States. The few resources that are found publicly, found [here](doc/3rd_party_data_source_links.txt), are not licensed for commercial applications and thus it becomes necessary to manually create new datasets for each prototype application. This blocks companies and teams from being able to develop new software and methodologies in applications such as license plate recognition as now countless man-hours must now be used to collect data in public domains. When this is completed, even if data is collected on public roads/spaces, companies would be wary of disclosing this action stemming from the emergence of possible avenues of litigation from increased data privacy protection laws such as the [GDPR](https://gdpr-info.eu) and [CCPA](https://oag.ca.gov/privacy/ccpa). 
 
-This situation is further complicated by the fact that unlike other nations, the possible license plate designs and lettering format differs greatly from state-to-state. For comparison, currently license plates in Texas for the most part have a white background with black lettering in a format of 3 letters followed by 4 numbers in the format of “ABC-1234”. However, given that there are license plates still around spanning decades and the numerous customizations that a given driver may use, even in a relatively simple design such as Texas, there are still multiple possible combinations of plates that must be accounted for when developing a dataset that reflects all possible cases in real-world scenarios. 
+This situation is further complicated by the fact that unlike other nations, the possible license plate designs and lettering format used in the United States differs greatly from state-to-state. For comparison, currently license plates in Texas for the most part have a white background with black lettering in a format of 3 letters followed by 4 numbers in the format of “ABC-1234”. However, given that there are license plates still around spanning decades and the numerous customizations that a given driver may use, even in a relatively simple design such as Texas, there are still multiple possible combinations of plates that must be accounted for when developing a dataset that reflects all possible cases in real-world scenarios. 
 
 Take the license plate shown below as an example, this license plate was custom made to use in this project and is the only license plate that is not anonymized as it is on one of my personal vehicles. Likewise, as of the writing of this documentation “MLE2024” is not registered to any vehicle in Texas. All figures found in this document that contain license plate data have been altered in post-production to grey out the last 4 characters of a given license plate — the same practice that is currently being used by ride-sharing companies in an effort to increase privacy protection for drivers. 
 
@@ -337,8 +339,6 @@ Once all the necessary transformations to the data have been completed, a datase
 <!--- [49] --->
 
 You are able to review the status of your dataset and Roboflow conveniently offloads the processing of the input images to their own internal systems thus eliminating the need to develop on a specific cloud platform. Similarly, rapid prototyping is made possible as there would be no testing to determine how much compute should be allocated for certain datasets over others. 
-
-*Unfortunately, I can not confirm if racoons were indeed fed.*
  
 
 <img src="doc/images/roboflow/Versions/Results_and_Observations_001.png" alt="Results_and_Observations_001.png">
@@ -584,7 +584,7 @@ Below is an example license plate input image that has been anonymized. As shown
 
 <!--- [78] --->
 
-The Raspberry Pi 4B was selected for this proof-of-concept as it has become common amongst hobbyists and start-ups alike due to its’ low cost of entry in the compact computing market at 35$ at the time of this project. 
+The Raspberry Pi 4B was selected for this proof-of-concept as it has become common amongst hobbyists and start-ups alike due to its’ low cost of entry in the compact computing market at $35 at the time of this project. 
 
 There were other edge device alternatives that could be used that run on similar architecture where I would expect similar performance and ease of development such as the Libre Computer Board AML-S905X-CC — dubbed “Le Potato” by some. However, for my purposes of this project being able to be referenced by other curious engineers I chose to go with a device that is more commonplace and battle tested in developer support forums. 
 
@@ -593,7 +593,7 @@ There were other edge device alternatives that could be used that run on similar
 
 <!--- [79] --->
 
-This choice however did come with the drawbacks of computing power that other more specialized and expensive platforms provide such as NVIDIA’s Jetson Nano that offers multiples more in terms of computing power however sits at above 125$ at the time of this project. The Raspberry Pi 4B could not handle real-time capturing and machine learning inference computation as it was limited by the 13.5 GFLOPS of performance and basic Broadcom Video Core IV. Nor was it expected to as this board was built for general purpose projects and not for niche AI applications as NVIDIA’s Jetson Nano products that have a rated 462 GFLOPS of performance. 
+This choice however did come with the drawbacks of computing power that other more specialized and expensive platforms provide such as NVIDIA’s Jetson Nano that offers multiples more in terms of computing power however sits at above $125 at the time of this project. The Raspberry Pi 4B could not handle real-time capturing and machine learning inference computation as it was limited by the 13.5 GFLOPS of performance and basic Broadcom Video Core IV. Nor was it expected to as this board was built for general purpose projects and not for niche AI applications as NVIDIA’s Jetson Nano products that have a rated 462 GFLOPS of performance. 
 
 Now that it is evident that roboflow’s automated labeling and machine learning dataset curation tools are sufficient to greatly minimize development time, the edge device it is deployed on becomes the next focus of optimization. Currently, the Jetson Nano stands to be the most promising commercial over-the-counter edge device that would enable real-time functionalities for computer vision model performance testing. With the rise of vision transformers , ViT in shorthand, I hope that these models will soon become optimized enough to be able on such edge devices with sufficient computing capacity such as the Jetson Nano. 
 
