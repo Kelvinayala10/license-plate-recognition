@@ -1,0 +1,12 @@
+names:
+- License-Plate
+nc: 1
+roboflow:
+  license: CC BY 4.0
+  project: license-plate-recognition-bgpr1
+  url: https://universe.roboflow.com/lpr-ydttq/license-plate-recognition-bgpr1/dataset/1
+  version: 1
+  workspace: lpr-ydttq
+test: ../test/images
+train: License-Plate-Recognition-1/train/images
+val: License-Plate-Recognition-1/valid/images
