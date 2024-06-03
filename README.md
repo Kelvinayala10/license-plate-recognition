@@ -75,7 +75,7 @@ The advent of effective technologies such as convolutional neural networks enhan
 | [Apple M1 Macbook Pro - 1 TB SSD / 16 GB RAM](https://www.apple.com/shop/product/FK1F3LL/A/refurbished-16-inch-macbook-pro-apple-m1-pro-chip-with-10%E2%80%91core-cpu-and-16%E2%80%91core-gpu-silver) | [https://www.apple.com/shop/product/FK1F3LL/A/refurbished-16-inch-macbook-pro-apple-m1-pro-chip-with-10‑core-cpu-and-16‑core-gpu-silver](https://www.apple.com/shop/product/FK1F3LL/A/refurbished-16-inch-macbook-pro-apple-m1-pro-chip-with-10%E2%80%91core-cpu-and-16%E2%80%91core-gpu-silver) |
 | [Raspberry PI Model 4B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) | https://www.raspberrypi.com/products/raspberry-pi-4-model-b/ |
 | [GoPro Hero 4 Black](https://www.amazon.com/GoPro-HERO4-Camera-Certified-Refurbished/dp/B0788P1B3Y?th=1) | https://www.amazon.com/GoPro-HERO4-Camera-Certified-Refurbished/dp/B0788P1B3Y?th=1 |
-| [Camera Stability Rig](https://github.com/Kelvinayala10/private-lpr/blob/main/doc/camera_rig.md) | [See This Link For More Details](https://github.com/Kelvinayala10/private-lpr/blob/main/doc/camera_rig.md) |
+| [Camera Stability Rig](doc/camera_rig.md) | [See This Link For More Details](doc/camera_rig.md) |
 
 # **Software Setup**
 
